@@ -7,9 +7,7 @@ import "@nomicfoundation/hardhat-chai-matchers";
 describe("BlobFeatureTest", function () {
   // 部署合约的fixture
   async function deployBlobFeatureTestFixture() {
-    const BlobFeatureTest = await ethers.getContractFactory(
-      "/v0.8.24/BlobFeatureTest"
-    );
+    const BlobFeatureTest = await ethers.getContractFactory("BlobFeatureTest");
     const blobFeatureTest = await BlobFeatureTest.deploy();
     return { blobFeatureTest };
   }
