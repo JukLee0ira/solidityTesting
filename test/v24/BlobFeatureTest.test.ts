@@ -25,7 +25,7 @@ describe("BlobFeatureTest", function () {
     });
 
     it("应该能够获取blob哈希", async function () {
-      const blobHash = await blobFeatureTest.testBlobHash(0);
+      const blobHash = await blobFeatureTest.testBlobHash(1);
       // blob哈希应该是一个32字节的值
       expect(blobHash).to.match(/^0x[0-9a-f]{64}$/i);
     });
