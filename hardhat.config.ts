@@ -23,6 +23,10 @@ const config: HardhatUserConfig = {
     ],
   },
   networks: {
+    pNet: {
+      url: "http://172.16.0.221:8545",
+      accounts: [PRIVATE_KEY],
+    },
     hardhat: {
       chainId: 31337,
       gas: "auto",
@@ -36,8 +40,9 @@ const config: HardhatUserConfig = {
       url: "https://devnetstats.hashlabs.apothem.network/devnet:8545",
       accounts: [PRIVATE_KEY],
       timeout: 60000,
-      gasPrice: "auto",
+      gasPrice: 30000000000,
       gas: 2100000,
+      chainId: 551,
     },
   },
   mocha: {
