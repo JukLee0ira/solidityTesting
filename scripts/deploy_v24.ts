@@ -21,11 +21,15 @@ async function main() {
   await functionPointerTest.deployed();
   console.log(`FunctionPointerTest deployed to ${functionPointerTest.address}`);
 
-  // 部署YulFeatureTest
-  const YulFeatureTest = await ethers.getContractFactory("YulFeatureTest");
-  const yulFeatureTest = await YulFeatureTest.deploy();
-  await yulFeatureTest.deployed();
-  console.log(`YulFeatureTest deployed to ${yulFeatureTest.address}`);
+  // 部署TransientStorageTest
+  const TransientStorageTest = await ethers.getContractFactory(
+    "TransientStorageTest"
+  );
+  const TransientStorageTest = await TransientStorageTest.deploy();
+  await TransientStorageTest.deployed();
+  console.log(
+    `TransientStorageTest deployed to ${TransientStorageTest.address}`
+  );
 }
 
 // We recommend this pattern to be able to use async/await everywhere
